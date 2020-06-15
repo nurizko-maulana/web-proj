@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2020 at 09:07 AM
+-- Generation Time: Jun 15, 2020 at 10:27 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -147,7 +147,13 @@ INSERT INTO `tbl_token_auth` (`id`, `username`, `password_hash`, `selector_hash`
 (2, 'admin', '$2y$10$73SObIysodWLSTa3cDFLNebo9kFPs57RKpIVj/ixbhPgiT0uePNky', '$2y$10$FdkaSC3bUI9RcavrZ6gHhOJQzI8b2Ibhs8xwgtv0HB/mUKc4e1cb6', 1, '2020-06-15 06:41:09'),
 (3, 'admin', '$2y$10$B6yUUaHKe1o.uLfbCGDNL./olK0bPMZRXyODiGXVVLscH6REB/wz.', '$2y$10$laawu5t2WDBxThdQ0Zj2HeR9IlHT9tv.Ub36gmhyVukd5MehCaSU.', 1, '2020-06-15 06:54:29'),
 (4, 'admin', '$2y$10$lt5ZcRxSPkt6bZBjYMhNoOV55Il1gdCMzvcduSpD4VwI0zpBEE9wq', '$2y$10$OMSG9HBQKRZZI0jrrWrOee9iHmcRNmOi00MfFMo4Vq1.5taCucgNC', 1, '2020-06-15 06:58:13'),
-(5, 'admin', '$2y$10$4ouo35Hoa6lYI.qj1kylouNTlPKJ6TDwrNVZRX0JboOx3dlfokqRi', '$2y$10$tU6o38jCeGkC14OgJ7Z7cOeXay9X0laFKyhlZOMyWqR38NCyoXn3q', 0, '2020-07-15 01:58:12');
+(5, 'admin', '$2y$10$4ouo35Hoa6lYI.qj1kylouNTlPKJ6TDwrNVZRX0JboOx3dlfokqRi', '$2y$10$tU6o38jCeGkC14OgJ7Z7cOeXay9X0laFKyhlZOMyWqR38NCyoXn3q', 1, '2020-06-15 08:03:29'),
+(6, 'admin', '$2y$10$f0NppX8pceyMUgLRgarhoeCMy/nfVgLiHNYMSmJ480dd8gPU127Ge', '$2y$10$2bmepl42Rixuo.J4NxESm.2Ht98dwjNL.L.phKqW14XKCR/dKQwym', 1, '2020-06-15 13:18:10'),
+(7, 'admin', '$2y$10$ox9DOg3aSbucWeAsLUVg5uBEKQtTfm21RFXuPAQhlKhaEWlPR1oRa', '$2y$10$FL2put5GZbvLOOlO5NkLDuQPX2PcgI.sZq8u.ar0GUJVlZSS8Bnam', 1, '2020-06-15 16:13:24'),
+(8, 'admin', '$2y$10$yyc7OJrkY.stYJJ/3DkZCe8usVZRYxXZTiI5mwJFFnWaCu1iTaAOK', '$2y$10$Hy.lqX3qcuOb6.dL7ejdC.yOQ8i2EnWjmhm9yAt0tbP11aWpGCemm', 1, '2020-06-15 17:54:32'),
+(9, 'admin', '$2y$10$FKwricIjRvbZ.EjCES8.f.ShJCLH.xLFwsrGG1hExepP/AWTt0liW', '$2y$10$lSKYqW5438.oZXYSso26ee6M/1l.vCAOB4Tcw1Wgz6wjlfKtHF7Ge', 0, '2020-07-15 12:54:32'),
+(10, 'edowardo', '$2y$10$W4sbyWHiUGhPed0k5J9iIu1jsDbcwJ9dxlioHN1a6U47hm412vDi.', '$2y$10$qrbvsTrBep66Vps984f1OeQssxNaPQzuJ0lIYNlAxHG5gMiiUTLNy', 1, '2020-06-15 19:52:49'),
+(11, 'edowardo', '$2y$10$FY7l5BGJp4dVAabPBeUjpeQPVrtKAiyLKhn5fm7Ylk2HQLYrV9yvW', '$2y$10$f2QUjq3eM8HyhongqbgDmu0Aax0RYxMkaTSbge3ZPHUAQaiJO8K1C', 0, '2020-07-15 14:52:49');
 
 -- --------------------------------------------------------
 
@@ -169,8 +175,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `level`, `status`) VALUES
 (1, 'admin', '$2a$10$0FHEQ5/cplO3eEKillHvh.y009Wsf4WCKvQHsZntLamTUToIBe.fG', 'admin', 1),
-(3, 'maulana2000', 'maulana2000', 'student', 1),
-(4, 'edowardo', 'edowardo', 'student', 1);
+(3, 'maulana2000', '$2a$10$0FHEQ5/cplO3eEKillHvh.y009Wsf4WCKvQHsZntLamTUToIBe.fG', 'student', 1),
+(4, 'edowardo', '$2a$10$0FHEQ5/cplO3eEKillHvh.y009Wsf4WCKvQHsZntLamTUToIBe.fG', 'student', 1),
+(5, 'manager', '$2a$10$0FHEQ5/cplO3eEKillHvh.y009Wsf4WCKvQHsZntLamTUToIBe.fG', 'manager', 1);
 
 --
 -- Indexes for dumped tables
@@ -247,13 +254,13 @@ ALTER TABLE `room`
 -- AUTO_INCREMENT for table `tbl_token_auth`
 --
 ALTER TABLE `tbl_token_auth`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
