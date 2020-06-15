@@ -53,8 +53,14 @@ if (! empty($_POST["login"])) {
             $auth->insertToken($username, $random_password_hash, $random_selector_hash, $expiry_date);
         } else {
             $util->clearAuthCookie();
-        }
-        $util->redirect("../examples/dashboard.php");
+		}
+		if($user[0]["level"] == "student" && $user[0]["status"] == 1){
+			$util->redirect("../examples/studentpage.php");
+		}else if($user[0]["level"] == "manager" && $user[0]["status"] == 1){
+			$util->redirect("../examples/managerdashboard.php");
+		}else if($user[0]["level"] == "admin" && $user[0]["status"] == 1){
+			$util->redirect("../examples/admindashboard.php");
+		}
     } else {
 		echo "Invalid Login";
 		$message = "Invalid Login";
