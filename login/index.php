@@ -55,11 +55,11 @@ if (! empty($_POST["login"])) {
             $util->clearAuthCookie();
 		}
 		if($user[0]["level"] == "student" && $user[0]["status"] == 1){
-			$util->redirect("../examples/studentpage.php");
+			$util->redirect("../module/student.php?page=list");
 		}else if($user[0]["level"] == "manager" && $user[0]["status"] == 1){
-			$util->redirect("../examples/managerdashboard.php");
+			$util->redirect("../module/manager.php?page=application");
 		}else if($user[0]["level"] == "admin" && $user[0]["status"] == 1){
-			$util->redirect("../examples/admindashboard.php");
+			$util->redirect("../module/admin.php?page=manage");
 		}
     } else {
 		echo "Invalid Login";
