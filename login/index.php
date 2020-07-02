@@ -21,10 +21,12 @@ if (! empty($_POST["login"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
     
-    $user = $auth->getMemberByUsername($username);
-    if (password_verify($password, $user[0]["password"])) {
-        $isAuthenticated = true;
-    }
+	$user = $auth->getMemberByUsername($username);
+	if (! empty($user)) {
+		if (password_verify($password, $user[0]["password"])) {
+			$isAuthenticated = true;
+		}
+	}
     
     if ($isAuthenticated) {
         $_SESSION["member_id"] = $user[0]["user_id"];
@@ -62,11 +64,10 @@ if (! empty($_POST["login"])) {
 			$util->redirect("../module/admin.php?page=manage");
 		}
     } else {
-		echo "Invalid Login";
 		$message = "Invalid Login";
 		?>
 		<script type="text/javascript">
-			console.log("Invalid Login");
+			alert("Username or Password Invalid");
 		</script>
 		<?php
     }
@@ -104,7 +105,7 @@ if (! empty($_POST["login"])) {
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 				<form class="login100-form validate-form" action="" method="post" id="frmLogin">
 					<span class="login100-form-title p-b-55">
-						Login
+						InfinTea Colleges
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">

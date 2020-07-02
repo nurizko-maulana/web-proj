@@ -22,114 +22,41 @@
                       </th>
                     </thead>
                     <tbody>
+                      <?php
+                        $connect = mysqli_connect("localhost","root","","accommodation_db");
+                        $query ="SELECT * FROM user";
+                        $sql = mysqli_query($connect,$query);
+                        while($row = mysqli_fetch_array($sql))
+                        {
+        	            ?>
                       <tr>
                         <td>
-                          Edowardo
+                          <?php echo $row["username"];?></td>
                         </td>
                         <td>
-                          Student
+                          <?php echo $row["level"];?></td>
                         </td>
                         <td>
-                          Active
+                          <?php
+                            $status = $row["status"];
+                            if($status == 1){
+                              echo 'Active';
+                            }else{
+                              echo 'Inactive';
+                            }
+                          ?></td>
                         </td>
                         <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
+                          <a href="admin.php?page=manage&method=edit_user&user_id=<?= $row['user_id'] ?>" type="button" class="btn btn-success btn-md" >Edit</a>
+                          <a href="admin.php?page=manage&user_id=<?php echo $row["user_id"];?>&method=delete"> <button type="button" class="btn btn-danger">Delete</button> </a>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          Nurizko Maulana
-                        </td>
-                        <td>
-                          Student
-                        </td>
-                        <td>
-                          Active
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          M. Raihan 
-                        </td>
-                        <td>
-                          Student
-                        </td>
-                        <td>
-                          Active
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mokhtar Ouardi
-                        </td>
-                        <td>
-                          Student
-                        </td>
-                        <td>
-                          Active
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Alichia Steffany
-                        </td>
-                        <td>
-                          Student
-                        </td>
-                        <td>
-                          Active
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Lucy Garcia
-                        </td>
-                        <td>
-                          Manager
-                        </td>
-                        <td>
-                          Inactive
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Manager
-                        </td>
-                        <td>
-                          Active
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                      </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
           </div>
+
+          

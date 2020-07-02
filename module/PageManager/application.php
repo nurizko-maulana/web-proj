@@ -2,209 +2,75 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Applicant Information</h4>
+              <div class="card-header text-center">
+                <h3 class="card-title">APPLICATION INFORMATION</h3>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="table text-center">
                     <thead class=" text-primary">
                       <th>
                         Student Name
                       </th>
                       <th>
-                        Student Matric
+                        Student Matrix
                       </th>
                       <th>
-                        Gender(M/F)
+                        Collage
                       </th>
                       <th>
-                        Year Contract
+                        Block
                       </th>
                       <th>
-                        Fees(RM)
+                        Room
                       </th>
-        
                       <th>
-                        College Name
+                        Status
+                      </th>
+                      <th>
+                        Date
                       </th>
                       <th class="text-center">
                         Approvement
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          Edowardo
-                        </td>
-                        <td>
-                          A18CS0297
-                        </td>
-                        <td>
-                          M
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          3000
-                        </td>
-                        <td>
-                          Edo's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Nurizko Maulana
-                        </td>
-                        <td>
-                          A18CS0212
-                        </td>
-                        <td>
-                          M
-                        </td>
-                        <td>
-                          3
-                        </td>
-                        <td>
-                          4500
-                        </td>
- 
-                        <td>
-                          Edo's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          M. Raihan 
-                        </td>
-                        <td>
-                          A18CS0221
-                        </td>
-                        <td>
-                          M
-                        </td>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          1500
-                        </td>
 
-                        <td>
-                          Mokhtar's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
+                      <?php
+                        $query ="SELECT * FROM booking";
+                        $sql = mysqli_query($connect,$query);
+                        while($row = mysqli_fetch_array($sql))
+                        {
+        	            ?>
                       <tr>
                         <td>
-                          Mokhtar Ouardi
+                          <?php echo $row["user_name"];?></td>
                         </td>
                         <td>
-                          A18CS2353
+                          <?php echo $row["matrix"];?></td>
                         </td>
                         <td>
-                          M
+                          <?php echo $row["college"];?></td>
                         </td>
                         <td>
-                          3
+                        <?php echo $row["block"];?></td>
                         </td>
                         <td>
-                          4500
+                          <?php echo $row["room_no"];?></td>
                         </td>
+                        <td>
+                          <?php echo $row["book_status"];?></td>
+                        </td>
+                        <td>
+                          <?php echo $row["date_booked"];?></td>
+                        </td>
+                        <td class="text-center">
+                          <a href="manager.php?page=application&book_id=<?php echo $row["book_id"];?>&method=approve"> <button type="button" class="btn btn-success" >Approve</button> </a>
+                          <a href="manager.php?page=application&book_id=<?php echo $row["book_id"];?>&method=disapprove"><button type="button" class="btn btn-danger">Disapprove</button> </a>
+                        </td>
+                      </tr>
+                      <?php } ?>
 
-                        <td>
-                          Riko's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Alichia Steffany
-                        </td>
-                        <td>
-                          A17CS0234
-                        </td>
-                        <td>
-                          F
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          3000
-                        </td>
- 
-                        <td>
-                          Edo's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Lucy Garcia
-                        </td>
-                        <td>
-                          A16JA2032
-                        </td>
-                        <td>
-                          F
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          3000
-                        </td>
-                        <td>
-                          Raihan's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          A18CS9233
-                        </td>
-                        <td>
-                          M
-                        </td>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          1500
-                        </td>
-                        <td>
-                          Riko's College
-                        </td>
-                        <td class="text-right">
-                          <button type="button" class="btn btn-success">Approve</button>
-                          <button type="button" class="btn btn-danger">Disapprove</button>
-                        </td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>

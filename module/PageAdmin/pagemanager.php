@@ -8,6 +8,8 @@
             break;    
         case "status":
             include('status.php');
-            break;    
+            break;
+        case "edit_user":
+            include("edit_user.php");
     }
 ?>

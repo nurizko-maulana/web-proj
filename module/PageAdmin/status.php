@@ -2,8 +2,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Current College Status</h4>
+              <div class="card-header text-center">
+                <h3 class="card-title">Current College Status</h3>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -16,69 +16,35 @@
                         Number of Students
                       </th>
                       <th>
-                        Fees/year(RM)
+                        Fees/Semester
                       </th>
                       <th>
                         Full/Not Full
                       </th>
                     </thead>
                     <tbody>
+                      <?php
+                        $connect = mysqli_connect("localhost","root","","accommodation_db");
+                        $query ="SELECT * FROM college";
+                        $sql = mysqli_query($connect,$query);
+                        while($row = mysqli_fetch_array($sql))
+                        {
+        	            ?>
                       <tr>
                         <td>
-                          Edo's College
+                          <?php echo $row["college_name"];?></td>
                         </td>
                         <td>
-                          955
+                          200
                         </td>
                         <td>
-                          1500
+                          RM<?php echo $row["college_price"];?></td>
                         </td>
                         <td>
                           Not Full
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          Riko's College
-                        </td>
-                        <td>
-                          789
-                        </td>
-                        <td>
-                          1500
-                        </td>
-                        <td>
-                          Not Full
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Raihan's College
-                        </td>
-                        <td>
-                          834
-                        </td>
-                        <td>
-                          1500
-                        </td>
-                        <td>
-                          Not Full
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mokhtar's College
-                        </td>
-                        <td>
-                           966
-                        </td>
-                        <td>
-                          1500
-                        </td>
-                        <td>
-                          Full
-                        </td>
-                      </tr>
+                        <?php } ?>
                     </tbody>
                   </table>
                 </div>

@@ -1,3 +1,16 @@
+<?php 
+   $connect = mysqli_connect("localhost","root","","accommodation_db");
+  if(isset($_GET["book_id"])){
+    $book_id = $_GET["book_id"];
+    $method = $_GET["method"];
+    if(strcmp($method, "approve") == 0){
+      $query = "UPDATE booking SET book_status='approve' WHERE book_id=" . $book_id ;
+      $sql = mysqli_query($connect,$query);
+    }else if(strcmp($method, "disapprove") == 0) {
+     $sql = mysqli_query($connect," UPDATE booking SET book_status='rejected' WHERE book_id = $book_id");
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
