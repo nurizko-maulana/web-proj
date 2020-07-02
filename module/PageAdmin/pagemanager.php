@@ -9,7 +9,8 @@
         case "status":
             include('status.php');
             break;
-        case "edit_user":
-            include("edit_user.php");
+        case "manage_user":
+            include("manage_user.php");
+            break;
     }
 ?>

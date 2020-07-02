@@ -47,8 +47,8 @@
                           ?></td>
                         </td>
                         <td class="text-right">
-                          <a href="admin.php?page=manage&method=edit_user&user_id=<?= $row['user_id'] ?>" type="button" class="btn btn-success btn-md" >Edit</a>
-                          <a href="admin.php?page=manage&user_id=<?php echo $row["user_id"];?>&method=delete"> <button type="button" class="btn btn-danger">Delete</button> </a>
+                          <a href="admin.php?page=manage_user&method=edit_user&user_id=<?= $row['user_id'] ?>" type="button" class="btn btn-success btn-md" >Edit</a>
+                          <a href="admin.php?page=manage&user_id=<?php echo $row["user_id"];?>&method=delete_user"> <button type="button" class="btn btn-danger">Delete</button> </a>
                         </td>
                       </tr>
                       <?php } ?>

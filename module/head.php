@@ -10,6 +10,12 @@
      $sql = mysqli_query($connect," UPDATE booking SET book_status='rejected' WHERE book_id = $book_id");
     }
   }
+  if(isset($_GET["method"]) && $_GET["method"] == "delete_user"){
+    echo $id = $_GET["user_id"];
+    if (!mysqli_query($connect,"UPDATE user SET status = 0 WHERE user_id=" . $id)) {
+      echo("Error description: " . mysqli_error($con));
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
