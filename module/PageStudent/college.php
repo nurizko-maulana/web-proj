@@ -13,7 +13,7 @@
                 <h5 class="card-category">Premium</h5>
                 <h4 class="card-title">Kolej Dato Onn Jafar</h4>
                 <p class="card-text">Price : RM1000</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">

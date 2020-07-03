@@ -10,5 +10,8 @@
         case "application":
             include('application.php');
             break;    
+        case "insert_college":
+            include('insert_college.php');
+            break;
     }
 ?>

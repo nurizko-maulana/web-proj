@@ -11,9 +11,9 @@
     }
   }
   if(isset($_GET["method"]) && $_GET["method"] == "delete_user"){
-    echo $id = $_GET["user_id"];
+    $id = $_GET["user_id"];
     if (!mysqli_query($connect,"UPDATE user SET status = 0 WHERE user_id=" . $id)) {
-      echo("Error description: " . mysqli_error($con));
+      echo("Error description: " . mysqli_error($connect));
     }
   }
 ?>
