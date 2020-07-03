@@ -29,7 +29,7 @@
                 <h5 class="card-category">Premium</h5>
                 <h4 class="card-title">Kolej Datin Seri Endon</h4>
                 <p class="card-text">Price : RM800</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -45,7 +45,7 @@
                 <h5 class="card-category">Premium</h5>
                 <h4 class="card-title">Kolej Perdana</h4>
                 <p class="card-text">Price : RM600</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -63,7 +63,7 @@
                 <h5 class="card-category">STANDARD</h5>
                 <h4 class="card-title">Kolej Tuanku Canselor</h4>
                 <p class="card-text">Price : RM1000</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -79,7 +79,7 @@
                 <h5 class="card-category">STANDARD</h5>
                 <h4 class="card-title">Kolej Tun Razak</h4>
                 <p class="card-text">Price : RM800</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -95,7 +95,7 @@
                 <h5 class="card-category">BASIC</h5>
                 <h4 class="card-title">Kolej Tun Dr Ismail</h4>
                 <p class="card-text">Price : RM600</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -113,7 +113,7 @@
                 <h5 class="card-category">PREMIUM</h5>
                 <h4 class="card-title">Kolej Tun Fatimah</h4>
                 <p class="card-text">Price : RM1000</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -129,7 +129,7 @@
                 <h5 class="card-category">STANDARD</h5>
                 <h4 class="card-title">Kolej Rahman Putra</h4>
                 <p class="card-text">Price : RM800</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -145,7 +145,7 @@
                 <h5 class="card-category">BASIC</h5>
                 <h4 class="card-title">Kolej 9/10</h4>
                 <p class="card-text">Price : RM600</p>
-                <a href="#" class="btn btn-primary">BOOK</a>
+                <a href="./student.php?page=insert_college" class="btn btn-primary">BOOK</a>
               </div>
               <div class="card-footer">
                 <div class="stats">
